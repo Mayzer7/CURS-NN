@@ -8847,26 +8847,6 @@ a.proj-video__gall-item .media-cover img {
   padding-bottom: 120px;
 }
 
-
-.news-info-main-banner {
-  background-image: url("../img/content/news-info-bg.webp");
-  background-position: center;
-  background-size: cover;   
-  background-repeat: no-repeat;
-
-  width: 100%;
-  min-height: 100vh; 
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-}
-
-.news-info-banner-content {
-  padding-bottom: 110px;
-}
-
 .news-info-data {
   font-size: 20px;
 }
