@@ -2395,6 +2395,10 @@ figcaption p {
   background: linear-gradient(0deg, rgba(0, 26, 47, 0.7) 0%, rgba(0, 26, 47, 0.7) 100%);
 }
 
+.no-bg::after {
+  display: none;
+}
+
 .intro__content {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
@@ -8823,17 +8827,26 @@ a.proj-video__gall-item .media-cover img {
 
 
 
-.news-top {
-  margin-top: 1000px;
-}
-
-
-
 /* Страница news-info.html */
 
-.news-info-main {
-  padding-top: 0px;
+.news-info-main .section{
+  padding: 70px 0px;
 }
+
+.news-info-main .section.news-info-gallery {
+  padding: 0px;
+}
+
+.news-info-main .section.news-info-reviews {
+  padding: 60px 0px;
+}
+
+.news-info-main .section.news-section {
+  padding: 0px;
+  padding-top: 60px;
+  padding-bottom: 120px;
+}
+
 
 .news-info-main-banner {
   background-image: url("../img/content/news-info-bg.webp");
@@ -8861,7 +8874,14 @@ a.proj-video__gall-item .media-cover img {
 .news-info-title {
   padding-top: 24px;
   padding-bottom: 40px;
-  font-size: 56px;
+}
+
+.news-info-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 12px;
 }
 
 .news-info-btn {
@@ -8872,4 +8892,75 @@ a.proj-video__gall-item .media-cover img {
 .news-info-content {
   background-color: #fff;
   color: #0D0D0D;
+}
+
+.news-info-gallery {
+  background-color: #FCFCFC;
+}
+
+.item-gallery-subtitle {
+  margin-top: 12px;
+  text-align: center;
+  color: var(--dark-gray-color);
+}
+
+.news-info-image {
+  padding-top: 70px;
+}
+
+.news-info-image img {
+  border-radius: 16px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.news-info-image-subtitle {
+  text-align: center;
+  color: var(--dark-gray-color);
+  font-size: 16px !important; 
+}
+
+.news-info-reviews {
+  background-color: var(--light-gray-color);
+}
+
+/* Адаптив страницы news-info.html */
+
+@media (max-width: 1280px) {
+  .news-info-title {
+    padding-top: 10px;
+    padding-bottom: 24px;
+  }
+
+  .news-info-main .section {
+    padding: 40px 0px;
+  }
+
+  .news-info-image {
+    padding-top: 40px;
+  }
+
+  .news-info-main .section.news-info-reviews {
+    padding: 50px 0px;
+  }
+
+  .news-info-main .section.news-section {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .news-info-main .section {
+    padding: 80px 0px;
+  }
+
+  .news-info-main .section.news-info-reviews {
+    padding: 40px 0px;
+  }
+
+  .news-info-main .section.news-section {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
 }

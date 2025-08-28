@@ -16,11 +16,21 @@
     <link rel="preload" href="fonts/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin> 
     <link href="css/air-datepicker.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
-    <title>Новости</title>
+    <title>Страница новости</title>
 </head>
 
-    <body>
-        
+    <body class="no-scroll">
+        <div class="preloader">
+    <div class="preloader__item">
+        <img src="img/svg/hockey-stadion.svg" alt>
+    </div>
+    <div class="preloader__item">
+        <img src="img/svg/football-stadion.svg" alt>
+    </div>
+    <div class="preloader__item">
+        <img src="img/svg/basketball-stadion.svg" alt>
+    </div>
+</div>
         <div class="wrap">
             <!--header-->
 
@@ -94,36 +104,63 @@
     </header>
             <!--main-->
             <main class="main news-info-main">
-                <!--breadcrumbs-->
-                <div class="breadcrumbs">
-                    <div class="container">
-                        <ul>
-                            <li><a href="main.html" class="link">Главная</a></li>
-                            <li><a href="news.html" class="link">Новости</a></li>
-                            <li>Заголовок новости</li>
-                        </ul>
-                    </div>
-                </div>
+                <!--intro-->
+                <section class="intro proj-intro">
 
-                <section class="news-info">
-                    <!-- <div class="news-info-bg-image">
-                        <img src="img/content/news-info-bg.webp" alt="">
+                    <!-- С обложкой -->
+
+                    <div class="media-cover intro__bg">
+                        <span class="media-cover-bg"></span>
+                        <picture>
+                            <source srcset="img/content/news-info-bg.webp" type="image/webp" media="(min-width: 1280.98px)">
+                            <source srcset="img/content/news-info-bg.webp" media="(min-width: 1280.98px)">
+                            <source srcset="img/content/news-info-bg-1280.webp" type="image/webp">
+                            <source srcset="img/content/news-info-bg-1280.webp">
+                            <img src="img/content/news-info-bg.webp" alt loading="lazy" data-animation="scaleUp">
+                        </picture>
+                    </div>
+
+                    <!-- Если обложки нету -->
+
+                    <!-- <div class="media-cover intro__bg no-bg">
+                        <span class="media-cover-bg"></span>
+                        <picture>
+                            <source srcset="img/content/news-info-no-bg.png" type="image/webp" media="(min-width: 1280.98px)">
+                            <source srcset="img/content/news-info-no-bg.png" media="(min-width: 1280.98px)">
+                            <source srcset="img/content/news-info-no-bg-mob.png" media="(max-width: 375.98px)">
+                            <source srcset="img/content/news-info-no-bg-1280.png" type="image/webp">
+                            <source srcset="img/content/news-info-no-bg-1280.png">
+                            <img src="img/content/news-info-bg.webp" alt loading="lazy" data-animation="scaleUp">
+                        </picture>
                     </div> -->
 
-                    <div class="news-info-main-banner">
-                        <div class="news-info-banner-content">
-                            <p class="news-info-data">31.08.2025</p>
+                    <div class="container intro__container">
+                        <!--breadcrumbs-->
+                        <div class="breadcrumbs">
+                            <div class="container">
+                                <ul>
+                                    <li><a href="main.html" class="link">Главная</a></li>
+                                    <li><a href="news.html" class="link">Новости</a></li>
+                                    <li>Заголовок новости</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                            <h1 class="news-info-title">
-                                Открыли программу предсезонных матчей
-                            </h1>
+                        <div class="intro__content">
+                            <p class="h5 news-info-data">
+                                31.08.2025
+                            </p>
+
+                            <h1 class="h2 news-info-title blur-text" data-animation="blurFadeUp">Открыли программу предсезонных матчей</h1>
                         
                             <button class="btn main-btn news-info-btn">
                                 <span>Кнопка</span>
                             </button>
                         </div>
                     </div>
-
+                </section>
+                
+                <section class="news-info">
                     <div class="news-info-content">
                         <div class="section section--light text-block policy-p">
                             <div class="container">
@@ -169,9 +206,192 @@
                                             </span> 
                                         </p>
 
-                                        <button class="btn main-btn news-info-btn">
-                                            <span>Кнопка</span>
-                                        </button>
+                                        <div class="news-info-btn-container">
+                                            <button class="btn main-btn news-info-btn">
+                                                <span>Кнопка</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--gallery-->
+                <section class="section section--dark gallery news-info-gallery">
+                    <div class="container">
+                        <div class="gallery__swiper">
+                            <div class="mb-40 swiper" data-animation="galleryAnim">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="item-gallery">
+                                                    <div class="media-cover">
+                                                        <picture>
+                                                            <source srcset="img/content/project-1-gall-1.webp" type="image/webp" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-1.jpg" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-1-mob.webp" type="image/webp">
+                                                            <source srcset="img/content/project-1-gall-1-mob.jpg">
+                                                            <img src="img/content/project-1-gall-1.jpg" alt loading="lazy">
+                                                        </picture>
+                                                    </div>
+
+                                                    <p class="item-gallery-subtitle">
+                                                        Подпись под фото
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item-gallery">
+                                                    <div class="media-cover">
+                                                        <picture>
+                                                            <source srcset="img/content/project-1-gall-2.webp" type="image/webp" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-2.jpg" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-2-mob.webp" type="image/webp">
+                                                            <source srcset="img/content/project-1-gall-2-mob.jpg">
+                                                            <img src="img/content/project-1-gall-2.jpg" alt loading="lazy">
+                                                        </picture>
+                                                    </div>
+
+                                                    <p class="item-gallery-subtitle">
+                                                        Подпись под фото
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="item-gallery">
+                                                    <div class="media-cover">
+                                                        <picture>
+                                                            <source srcset="img/content/project-1-gall-3.webp" type="image/webp" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-3.jpg" media="(min-width: 767.98px)">
+                                                            <source srcset="img/content/project-1-gall-3-mob.webp" type="image/webp">
+                                                            <source srcset="img/content/project-1-gall-3-mob.jpg">
+                                                            <img src="img/content/project-1-gall-3.jpg" alt loading="lazy">
+                                                        </picture>
+                                                    </div>
+
+                                                    <p class="item-gallery-subtitle">
+                                                        Подпись под фото
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-nav">
+                                        <button class="btn nav-btn nav-btn--prev"><svg><use xlink:href="img/svg/sprite.svg#btn-prev"></use></svg></button>
+                                        <button class="btn nav-btn nav-btn--next"><svg><use xlink:href="img/svg/sprite.svg#btn-next"></use></svg></button>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+
+                <section class="news-info">
+                    <div class="news-info-content">
+                        <div class="section section--light text-block policy-p">
+                            <div class="container">
+                                <div class="policy-p__content">
+                                    <div class="page-content">
+                                        <p>
+                                            В контрольной встрече с обладателем Кубка Гагарина хоккеисты «Торпедо» уступили сопернику с минимальным счетом - 1:2 (1:1, 0:0, 0:1).
+                                        </p>
+
+                                        <p>
+                                            Стартовый период порадовал болельщиков ярким, скоростным и, что немаловажно, результативным хоккеем. Уже в дебюте команды принялись искать пути к воротам друг друга и вскоре преуспели в своих попытках. Счет был открыт в середине периода хозяевами льда.<span>Ярослав Лихачёв</span> выбрался из-за ворот и с разворота отправил шайбу в цель. Подопечные Алексея Исакова отыгрались уже через 5 минут. Бобби Нарделла здорово открылся на дальней штанге и мощным кистевым оформил первый гол «Торпедо» в программе контрольных матчей - 1:1. До конца периода счет мог не раз поменяться в одну и другую стороны. Но на «последнем рубеже» были успешны Иван Кульбаков и Даниил Исаев. <br><br>
+                                            После перерыва активный хоккей в исполнении команд продолжился. Торпедовцы немало времени проводили в атаках, серьезно превзойдя действующего обладателя Кубка Гагарина в бросках по воротам. Однако голевыми успехами двадцатиминутка не отметилась.<br><br>
+                                            В третьем периоде команды продолжили действовать на встречных курсах, не забывая о голевых моментах. В игре равных возможностей судьба была решена при помощи «стандартного положения». Численное преимущество «железнодорожников» обернулось решающим голом, авторство в котором записал на себя Денис Алексеев - 2:1. Эта шайба стала заключительной в основное время, но хоккей не завершился с сиреной об окончании 3 периода. Сначала команды испытали себя в овертайме, который не вместил голевых успехов. А уже в серии буллитов «сухая» победа досталась торпедовцам. Василий Атанасов и Алексей Кручинин по разу переиграли Алексея Мельничука, а Иван Кульбаков, в свою очередь, остался «непробиваемым»!<br><br>
+                                            Программа контрольных игр продолжится для «Торпедо» в Москве, где 20 августа наша команда сыграет со «Спартаком».
+                                        </p>
+                                
+
+                                        <div class="news-info-image">
+                                            <img src="img/content/news-info-img.webp" alt="">
+
+                                            <p class="news-info-image-subtitle  ">
+                                                Подпись под фото
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--reviews-->
+                <div class="section section--light swiper1 reviews proj-reviews news-info-reviews" data-animation="fadeUp">
+                    <div class="container">
+                        <div class="swiper width-6col">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <figure class="reviews__item">
+                                        <div class="media-cover">
+                                            <picture><source srcset="img/content/project-2-review-1.webp" type="image/webp"><img src="img/content/project-2-review-1.jpg" alt></picture>
+                                        </div>
+                                        <blockquote>
+                                            <p>“Прекрасная организация, интересный выезд для зрителей. Мне кажется, это было прекрасное шоу. Благодарю всех организаторов этого
+                                                мероприятия.
+                                            </p>
+                                            <p>Понравилась атмосфера не только в зале, но во всей Выксе: везде рекламные щиты, везде крутится ролик с участием наших
+                                                игроков.”</p>
+                                        </blockquote>
+                                        <figcaption>
+                                            <cite>Станислав Саликов</cite>
+                                            <p>Главный тренер «Спарты»</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="reviews__item">
+                                        <div class="media-cover">
+                                            <picture><source srcset="img/content/project-2-review-2.webp" type="image/webp"><img src="img/content/project-2-review-2.jpg" alt></picture>
+                                        </div>
+                                        <blockquote>
+                                            <p>“Очень круто было играть с такой бешеной поддержкой болельщиков, которая придавала ещё больше стремления и желания, эмоций
+                                                играть дальше.”</p>
+                                        </blockquote>
+                                        <figcaption>
+                                            <cite>Юлия Столбова</cite>
+                                            <p>нападающая ВК «Спарта»</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <div class="swiper-slide">
+                                    <figure class="reviews__item">
+                                        <div class="media-cover">
+                                            <picture><source srcset="img/content/project-2-review-3.webp" type="image/webp"><img src="img/content/project-2-review-3.jpg" alt></picture>
+                                        </div>
+                                        <blockquote>
+                                            <p>“Болельщики гнали нас вперёд, этот гул трибун... Когда мы вышли, были удивлены количеством людей, которые пришли на матч. Хочу
+                                                поблагодарить всех, было очень приятно играть!”</p>
+                                        </blockquote>
+                                        <figcaption>
+                                            <cite>Карина Симонова</cite>
+                                            <p>доигровщица «Спарты»</p>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <section class="news-info">
+                    <div class="news-info-content">
+                        <div class="section section--light text-block policy-p">
+                            <div class="container">
+                                <div class="policy-p__content">
+                                    <div class="page-content">
+                                        <p>
+                                            В контрольной встрече с обладателем Кубка Гагарина хоккеисты «Торпедо» уступили сопернику с минимальным счетом - 1:2 (1:1, 0:0, 0:1).
+                                        </p>
+
+                                        <p>
+                                            Стартовый период порадовал болельщиков ярким, скоростным и, что немаловажно, результативным хоккеем. Уже в дебюте команды принялись искать пути к воротам друг друга и вскоре преуспели в своих попытках. Счет был открыт в середине периода хозяевами льда.<span>Ярослав Лихачёв</span> выбрался из-за ворот и с разворота отправил шайбу в цель. Подопечные Алексея Исакова отыгрались уже через 5 минут. Бобби Нарделла здорово открылся на дальней штанге и мощным кистевым оформил первый гол «Торпедо» в программе контрольных матчей - 1:1. До конца периода счет мог не раз поменяться в одну и другую стороны. Но на «последнем рубеже» были успешны Иван Кульбаков и Даниил Исаев. <br><br>
+                                            После перерыва активный хоккей в исполнении команд продолжился. Торпедовцы немало времени проводили в атаках, серьезно превзойдя действующего обладателя Кубка Гагарина в бросках по воротам. Однако голевыми успехами двадцатиминутка не отметилась.<br><br>
+                                            В третьем периоде команды продолжили действовать на встречных курсах, не забывая о голевых моментах. В игре равных возможностей судьба была решена при помощи «стандартного положения». Численное преимущество «железнодорожников» обернулось решающим голом, авторство в котором записал на себя Денис Алексеев - 2:1. Эта шайба стала заключительной в основное время, но хоккей не завершился с сиреной об окончании 3 периода. Сначала команды испытали себя в овертайме, который не вместил голевых успехов. А уже в серии буллитов «сухая» победа досталась торпедовцам. Василий Атанасов и Алексей Кручинин по разу переиграли Алексея Мельничука, а Иван Кульбаков, в свою очередь, остался «непробиваемым»!<br><br>
+                                            Программа контрольных игр продолжится для «Торпедо» в Москве, где 20 августа наша команда сыграет со «Спартаком».
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -180,280 +400,123 @@
                 </section>
 
                 <!--news-->
-                <section class="section section--dark news news-p      news-top">
+                <section class="section section--dark news news-section">
                     <div class="container">
                         <div class="sec-top">
-                            <h1 class="h1 blur-text" data-animation="blurFadeUp">Новости</h1>
-                        </div>
-                        <div class="filter news__filter">
-                            <form class="filter__form">
-                                <input type="hidden" data-datepicker-value>
-                                <div class="dropdown">
-                                    <div class="dropdown__header" data-animation="fadeRight">
-                                        <span>Вид спорта</span>
-                                        <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
-                                    </div>
-                                    <div class="dropdown__body">
-                                        <div class="custom-scroll">
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[1]">
-                                                <span>Баскетбол</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[2]">
-                                                <span>Волейбол</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[3]">
-                                                <span>Футзал</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[4]">
-                                                <span>Футбол</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[5]">
-                                                <span>Хоккей</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[6]">
-                                                <span>Хоккей с мячом</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown">
-                                    <div class="dropdown__header" data-animation="fadeRight">
-                                        <span>Клуб</span>
-                                        <svg><use xlink:href="img/svg/sprite.svg#chevron-bot"></use></svg>
-                                    </div>
-                                    <div class="dropdown__body">
-                                        <div class="custom-scroll">
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[7]">
-                                                <span>ХК «Торпедо»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[8]">
-                                                <span>ХК «Торпедо-Горький»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[9]">
-                                                <span>ХК «Чайка»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[10]">
-                                                <span>ФК «Пари Нижний Новгород»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[11]">
-                                                <span>ФК «Химик»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[12]">
-                                                <span>ПКМФ «Торпедо»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[13]">
-                                                <span>ЖФК «Норманочка»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[14]">
-                                                <span>БК «Пари Нижний Новгород»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[15]">
-                                                <span>ВК «Спарта»</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[16]">
-                                                <span>ВК АСК</span>
-                                            </label>
-                                            <label class="item-checkbox">
-                                                <input type="checkbox" data-id="filter[17]">
-                                                <span>ХК «Старт»</span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="filter__selected">
-                                <ul class="filter__selected-items"></ul>
-                            </div>
+                            <h2 class="blur-text" data-animation="blurFadeUp">Смотрите также</h2>
                         </div>
                         <div class="news__wrapper">
                             <div class="news__items">
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/volleyball.svg" alt="Волейбол">
-                Волейбол
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/futsal.svg" alt="Футзал">
-                Футзал
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/basketball.svg" alt="Баскетбол">
-                Баскетбол
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/bandy.svg" alt="Хоккей с мячом">
-                Хоккей с мячом
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/volleyball.svg" alt="Волейбол">
-                Волейбол
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                                 <!--news-article-->
-<article class="news-article" data-animation="fadeUp">
-    <div class="news-article__preview">
-        <a href="#" class="media-cover">
-            <picture>
-                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
-                <source srcset="img/content/news-3-1280.webp" type="image/webp">
-                <source srcset="img/content/news-3-1280.jpg">
-                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
-            </picture>
-        </a>
-        <div class="page-tags">
-            <a href="#" class="page-tags__item">
-                <img src="img/svg/icons/hockey.svg" alt="Хоккей">
-                Хоккей
-            </a>
-        </div>
-    </div>
-    <div class="news-article__content">
-        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
-        <span class="news-article__date">28.04.2025</span>
-    </div>
-</article>
+                <article class="news-article" data-animation="fadeUp">
+                    <div class="news-article__preview">
+                        <a href="#" class="media-cover">
+                            <picture>
+                                <source srcset="img/content/news-3.webp" type="image/webp" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3.jpg" media="(min-width: 1280.98px)">
+                                <source srcset="img/content/news-3-1280.webp" type="image/webp">
+                                <source srcset="img/content/news-3-1280.jpg">
+                                <img src="img/content/news-3.jpg" alt loading="lazy" class="scaleUp">
+                            </picture>
+                        </a>
+                    </div>
+                    <div class="news-article__content">
+                        <h5><a href="#">Сила команды: как доверие решает исход волейбольного матча</a></h5>
+                        <span class="news-article__date">28.04.2025</span>
+                    </div>
+                </article>
                             </div>
                             
-<!--pagination-->
-<div class="page-navigation">
-    <nav class="pagination">
-        <a class="pagination__btn prev disabled" href="#">
-            <svg><use href="img/svg/sprite.svg#chevron-left"></use></svg>
-            <span>Назад</span>
-        </a>
-        <a class="pagination__link current" href="#">1</a>
-        <a class="pagination__link" href="#">2</a>
-        <span class="pagination__item">...</span>
-        <a class="pagination__link" href="#">14</a>
-        <a class="pagination__link" href="#">15</a>
-        <a class="pagination__link" href="#">16</a>
-        <span class="pagination__item">...</span>
-        <a class="pagination__link" href="#">19</a>
-        <a class="pagination__link" href="#">20</a>
-        <a class="pagination__btn next" href="#">
-            <span>Дальше</span>
-            <svg><use href="img/svg/sprite.svg#chevron-right"></use></svg>
-        </a>
-    </nav>
-</div>
-
-                        </div>
-                    </div>
                 </section>
             </main>
             <!--footer-->
