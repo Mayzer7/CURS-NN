@@ -7017,7 +7017,7 @@ a.proj-video__gall-item .media-cover img {
   }
 
   .text-block .page-content {
-    max-width: 1120px;
+    max-width: 1084px;
   }
 
   .footer {
@@ -8886,6 +8886,7 @@ a.proj-video__gall-item .media-cover img {
 
 .news-info-image {
   padding-top: 70px;
+  width: 100%;
 }
 
 .news-info-image img {
